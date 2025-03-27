@@ -1,13 +1,11 @@
-# QueryWiz - SQL Editor
+# SQLDesk - SQL Query Runner
 
-**Web App’s Link: https://querywiz.vercel.app/**
+**Web App’s Link:[https://sqldesk.netlify.app/]**
 
 ## Overview
 
-QueryWiz is a web-based SQL editor that allows users to input SQL queries and view the results of those queries. The application includes a space to enter SQL commands and displays a table with dummy data in response to the queries. It provides a user-friendly interface for data analysts to work efficiently. The SQL editor is built using **React with Vite** as it is fast, lightweight and easy to use. The project includes some additional packages for enhanced functionality.
+Users can enter SQL queries and view the results of such queries using the web-based SQL editor SQLDESK. In response to the queries, the application shows a table with fictitious data and has a place for entering SQL commands. It gives data analysts an easy-to-use interface so they can work effectively. Because React with Vite is quick, light, and user-friendly, it was used to build the SQL editor. A few other packages are included in the project for improved functionality.
 
-## Demo
-https://github.com/HrishabhCodes/QueryWiz/assets/71200145/3ce122c2-3361-4bd1-b47c-4994951f03fd
 
 ## Packages
 
@@ -20,19 +18,25 @@ https://github.com/HrishabhCodes/QueryWiz/assets/71200145/3ce122c2-3361-4bd1-b47
 
 ## Features
 
-- **AI Chatbot:** QueryWiz comes equipped with an intelligent chatbot that enhances the user experience by providing real-time assistance with SQL queries. This chatbot leverages the application's dummy data to analyze and understand user queries, offering immediate responses and helpful suggestions.
-- **Multiple workspaces:** QueryWiz allows users to create and manage multiple workspaces, providing a seamless way to organize their analysis. Users can segregate different projects, datasets, or SQL queries into separate workspaces, making it easier to switch between tasks without losing context. This feature enhances the possibility of collaboration, which can be added in the project later, as users can collaborate within specific workspaces, streamlining team efforts. Whether you're a solo data analyst or part of a larger team, the ability to work in isolated environments ensures a more structured and efficient SQL editing experience in QueryWiz.
-- **Multiple Tabs:** QueryWiz has a powerful multi-tab SQL editor within each workspace, empowering users to run multiple queries concurrently. With the ability to open and manage multiple tabs, data analysts can work on various SQL scripts simultaneously, avoiding the need to switch between different queries. This feature enhances productivity and flexibility, enabling users to analyze and compare different datasets or scenarios within the same workspace effortlessly.
-- **Cheatsheet:** The addition of a comprehensive SQL cheatsheet within QueryWiz streamlines the query-writing process for users. This cheatsheet offers a vast collection of pre-written SQL queries covering various scenarios
+- ** AI-Powered Chatbot Assistant:** An intelligent chatbot built to expedite the development of SQL queries is included into SQLDESK.  The chatbot uses the application's dummy datasets to assess user inputs in real time and provide rapid fixes, grammar corrections, and context-aware suggestions.  By eliminating uncertainty and guaranteeing smooth query development, the AI assistant speeds up your process, whether you're debugging a complicated JOIN or optimizing a WHERE clause.
+- **Multi-Workspace Architecture:** With the workspace concept in SQLDESK, you can easily organize your tasks.  Assure clear job separation by creating environments specifically for different datasets, teams, or workflows.  In addition to increasing individual productivity, this capability sets the stage for future collaboration solutions by allowing teams to work concurrently without interfering with SQL scripts or results.
+- **Multi-Tab Query Editor:** Use the tabbed interface of SQLDESK to do away with context-switching.  You can compare results, iterate on scripts, or test different strategies side by side by opening and managing many SQL queries at once in a same workspace.  For optimal flexibility, each tab functions independently while maintaining execution history and unsaved changes.
+- ** Built-In SQL Cheatsheet:** Use a carefully selected library of pre-written SQL snippets to expedite your development.  The cheatsheet offers quick access to syntax examples and best practices for everything from simple SELECT statements to sophisticated window functions.  To locate the ideal template for your requirements, filter by use case (such as data aggregation or table joins).
+
 
 ## Load Time
 
-Page Load Time has been measured using the Lighthouse Tool, a robust performance analysis tool that evaluates web pages' loading speed and provides actionable insights for optimization. This data ensures that QueryWiz delivers a seamless user experience, with efficient loading times for enhanced productivity and satisfaction.
+The Lighthouse Tool, a powerful performance measurement tool that assesses web page loading speed and offers useful insights for optimization, has been used to measure page load time.  With the use of this data, QueryWiz guarantees a flawless user experience with quick loading times for increased satisfaction and productivity.
 
-<img width="864" alt="Screenshot 2023-08-04 at 4 15 09 PM" src="https://github.com/HrishabhCodes/QueryWiz/assets/71200145/3969a56f-900f-45d5-86cb-d0b435752f6a">
 
-## Optimizations
+![Alt text]([https://imgur.com/a/Sy5ObZ8])
 
-- **Vite's Built-in Tree Shaking:** Vite automatically performs tree shaking during the build process, eliminating unused code and dependencies from the final bundle. This optimization ensures that only the necessary parts of the code are included in the production build, leading to smaller bundle sizes and faster load times for QueryWiz.
-- **Utilizing useCallback and useMemo Hooks:** In QueryWiz, the useCallback and useMemo hooks are employed to enhance performance and prevent unnecessary re-renders. useCallback optimizes event handler functions, ensuring they are not recreated on every render, while useMemo efficiently memoizes expensive computations, avoiding redundant calculations and improving the overall responsiveness of the application. These hooks play a vital role in maintaining a smooth and efficient user experience, especially when dealing with complex queries and data manipulation.
-- **Implementation of Lazy Loading:** QueryWiz incorporates lazy loading techniques to defer the loading of certain components and resources until they are needed. By employing lazy loading, the application reduces the initial bundle size, resulting in faster page load times and improved performance. To avoid any impact on page load time caused by importing the react-ace editor, I've opted for lazy loading by employing lazy import.
+
+## Technical Optimizations in SQLDESK
+
+- **Vite's Built-in Tree Shaking:**During the build process, Vite automatically shakes the tree to remove dependencies and unnecessary code from the finished bundle.  Because only the essential portions of the code are included in the production version, this optimization results in reduced bundle sizes and quicker SQLDESK load times. The Lighthouse Tool, a powerful performance measurement tool that assesses web page loading speed and offers useful insights for optimization, has been used to measure page load time.  With the use of this data, QueryWiz guarantees a flawless user experience with quick loading times for increased satisfaction and productivity.
+- **Utilizing useCallback and useMemo Hooks:** useCallback Stabilizes event handlers (query execution, workspace/tab switches) to prevent unnecessary re-renders.
+useMemo Memoizes heavy tasks like parsing large datasets (~10k rows) and caching query results for instant reuse.
+Result - Smoother UI interactions and faster responses during complex operations.
+- **Implementation of Lazy Loading:** Lazy loading is a technique used by SQLDESK to postpone non-essential elements (like the React-ace editor) until they are needed.  The initial bundle size is decreased by dynamically importing these components, guaranteeing better performance and quicker page loads.  For example, there is no upfront resource overhead because the code editor only loads when the user interacts with the query field.
+
