@@ -29,7 +29,7 @@ Users can enter SQL queries and view the results of such queries using the web-b
 The Lighthouse Tool, a powerful performance measurement tool that assesses web page loading speed and offers useful insights for optimization, has been used to measure page load time.  With the use of this data, QueryWiz guarantees a flawless user experience with quick loading times for increased satisfaction and productivity.
 
 
-![Alt text](https://i.imgur.com/abcd123.png)
+![Image](https://github.com/user-attachments/assets/dff17c04-e40f-4911-bd04-71bf77e8a6e8)
 
 
 ## Technical Optimizations in SQLDESK
